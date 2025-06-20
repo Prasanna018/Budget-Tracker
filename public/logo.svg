@@ -1,0 +1,47 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Pink-Orange Gradient -->
+        <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />  <!-- Vibrant Pink -->
+            <stop offset="100%" style="stop-color:#ffa502;stop-opacity:1" /> <!-- Bright Orange -->
+        </linearGradient>
+        
+        <!-- Shadow Gradient -->
+        <linearGradient id="shadowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#e84393;stop-opacity:0.7" />  <!-- Deep Pink -->
+            <stop offset="100%" style="stop-color:#fd9644;stop-opacity:0.7" /> <!-- Dark Orange -->
+        </linearGradient>
+        
+        <!-- Glow Effect -->
+        <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="4" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+    </defs>
+    
+    <!-- 3D Shadow Effect (Behind) -->
+    <text x="15" y="120" font-family="Arial, sans-serif" font-size="80" font-weight="bold" 
+          fill="url(#shadowGradient)" opacity="0.8" transform="translate(5,5)">
+        Budget Tracker
+    </text>
+    
+    <!-- 3D Shadow Effect (Deeper) -->
+    <text x="15" y="120" font-family="Arial, sans-serif" font-size="80" font-weight="bold" 
+          fill="url(#shadowGradient)" opacity="0.5" transform="translate(10,10)">
+        Budget Tracker
+    </text>
+    
+    <!-- Main Text (Pink-Orange Gradient) -->
+    <text x="15" y="120" font-family="Arial, sans-serif" font-size="80" font-weight="bold" 
+          fill="url(#textGradient)" stroke="#ffffff" stroke-width="1" filter="url(#glow)">
+        Budget Tracker
+    </text>
+    
+    <!-- Decorative Line -->
+    <line x1="15" y1="130" x2="400" y2="130" stroke="url(#textGradient)" stroke-width="4" stroke-linecap="round" />
+    
+    <!-- Dollar Sign Icon (Matching Gradient) -->
+    <path d="M450,60 L470,60 L470,80 L450,80 Z M460,40 L460,100" 
+          stroke="url(#textGradient)" stroke-width="6" stroke-linecap="round" fill="none" />
+    <path d="M450,70 L470,70" stroke="url(#textGradient)" stroke-width="3" />
+</svg>
